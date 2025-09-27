@@ -1,0 +1,21 @@
+services:
+  pgvector:
+    image: ankane/pgvector:latest
+    container_name: volcamp_postgres_vector
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: vectordb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - volcamp_postgres_vector
+
+networks:
+  volcamp_postgres_vector:
+
+volumes:
+  postgres_data:

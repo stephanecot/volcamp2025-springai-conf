@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: volcamp-2025-example2
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/vectordb
+    username: postgres
+    password: postgres
+
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: gpt-oss:20b
+        # model: mistral-small-7b
+      embedding:
+        model: nomic-embed-text
+
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 768
+        max-document-batch-size: 10000
+        table-name: vector_store

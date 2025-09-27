@@ -1,0 +1,1 @@
+ajouter des exemples avec mapping json

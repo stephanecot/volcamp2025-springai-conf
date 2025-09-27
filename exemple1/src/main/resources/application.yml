@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: volcamp-2025-example1
+
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: gpt-oss:20b
+        # model: mistral-small-7b

@@ -1,0 +1,1 @@
+docker compose -f docker-compose.yml -p volcamp_2025 up -d
