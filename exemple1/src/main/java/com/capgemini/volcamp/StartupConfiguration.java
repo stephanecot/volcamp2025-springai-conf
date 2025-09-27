@@ -45,7 +45,12 @@ public class StartupConfiguration implements CommandLineRunner {
     @Override
     public void run(String... args) {
         // Exemple simple (texte libre)
-        var question = "Génère moi un guerrier ultra musclé en code ASCII";
+        var question = """
+                Génère moi un guerrier ultra musclé en code ASCII.
+ 
+                Il doit être en position de combat, avec une épée dans une main et un bouclier dans l'autre.
+                Il doit avoir deux mains et deux jambes.
+            """;
         var response = this.askQuestion(question);
 
         log.info("Réponse texte libre à '{}': {}", question, response);

@@ -6,7 +6,7 @@ spring:
     name: volcamp-2025-example2
 
   datasource:
-    url: jdbc:postgresql://localhost:5433/vectordb
+    url: jdbc:postgresql://localhost:5432/vectordb
     username: postgres
     password: postgres
 
@@ -17,7 +17,7 @@ spring:
         model: gpt-oss:20b
         # model: mistral-small-7b
       embedding:
-        model: nomic-embed-text
+        model: qwen3-embedding:0.6b
 
     vectorstore:
       pgvector:

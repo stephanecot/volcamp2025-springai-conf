@@ -59,7 +59,12 @@ public class StartupConfiguration implements CommandLineRunner {
     public void run(String... args) {
         this.insertDocument();
 
-        var question = "De quel ingredients j'ai besoin pour un Aligot de l’Aubrac";
+        var question = """
+            De quels ingredients j'ai besoin pour un Aligot de l’Aubrac ?
+
+            Combien de temps faut-il pour le préparer ?
+        """;
+
         var docs = this.similaritySearchExample(question, 5);
 
         docs.forEach(doc -> log.info("Doc: {}", doc.getText()));
