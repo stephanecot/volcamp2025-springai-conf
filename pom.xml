@@ -16,6 +16,7 @@
     <modules>
         <module>exemple1</module>
         <module>exemple2</module>
+        <module>exemple3</module>
     </modules>
 
     <parent>
