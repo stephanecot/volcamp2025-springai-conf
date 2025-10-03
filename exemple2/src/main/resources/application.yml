@@ -14,7 +14,7 @@ spring:
     ollama:
       base-url: http://localhost:11434
       chat:
-        model: gpt-oss:20b
+        model: gemma3:12b
         # model: mistral-small-7b
       embedding:
         model: qwen3-embedding:0.6b
@@ -26,3 +26,9 @@ spring:
         dimensions: 768
         max-document-batch-size: 10000
         table-name: vector_store
+
+logging:
+  level:
+    root: INFO
+  pattern:
+    console: "%-5level %msg%n"

@@ -63,11 +63,13 @@ public class StartupConfiguration implements CommandLineRunner {
             De quels ingredients j'ai besoin pour un Aligot de l’Aubrac ?
 
             Combien de temps faut-il pour le préparer ?
+
+            Réponds en français.
         """;
 
         var docs = this.similaritySearchExample(question, 5);
 
-        docs.forEach(doc -> log.info("Doc: {}", doc.getText()));
+        // docs.forEach(doc -> log.info("Doc: {}", doc.getText()));
 
         this.askQuestion(question);
     }

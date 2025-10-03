@@ -9,5 +9,11 @@ spring:
     ollama:
       base-url: http://localhost:11434
       chat:
-        model: gemma3:4b
+        model: gemma3:12b
         # model: mistral-small-7b
+
+logging:
+  level:
+    root: INFO
+  pattern:
+    console: "%-5level %msg%n"
